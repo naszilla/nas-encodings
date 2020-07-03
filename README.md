@@ -1,2 +1,3 @@
-# nas-encodings
-Encodings for neural architecture search
+# A Study on Encodings for Neural Architecture Search
+
+Coming soon.
