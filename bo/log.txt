@@ -1,0 +1,4 @@
+2020-01-14 10:28:55,269 From /Users/colinwhite/nasbench/nasbench/api.py:146: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and: 
+`tf.data.TFRecordDataset(path)`
