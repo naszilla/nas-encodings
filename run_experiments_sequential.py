@@ -11,12 +11,17 @@ from params import *
 
 
 def run_experiments(args, save_dir):
-
+    """
+    currently we need to set the search space as an environment variable
+    so that data.py knows which Cell class to import.
+    TODO: handle this better by making Cell subclasses for each search space
+    """
     os.environ['search_space'] = args.search_space
 
     from nas_algorithms import run_nas_algorithm
     from data import Data
 
+    # set up arguments
     trials = args.trials
     out_file = args.output_filename
     save_specs = args.save_specs
@@ -38,7 +43,7 @@ def run_experiments(args, save_dir):
 
         for j in range(num_algos):
             # run NAS algorithm
-            print('\n* Running algorithm: {}'.format(algorithm_params[j]))
+            print('\n* Running NAS algorithm: {}'.format(algorithm_params[j]))
             starttime = time.time()
             algo_result, run_datum = run_nas_algorithm(algorithm_params[j], search_space, mp)
             algo_result = np.round(algo_result, 5)
