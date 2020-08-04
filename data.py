@@ -27,12 +27,19 @@ class Data:
                  search_space,
                  dataset='cifar10', 
                  nasbench_folder='./', 
+                 index_hash_folder='./',
                  loaded_nasbench=None):
 
         self.search_space = search_space
         self.dataset = dataset
-        self.index_hash = pickle.load(open(os.path.expanduser('~/nas_encodings/index_hash.pkl'), 'rb'))
+        """
+        Some of the path-based encoding methods require a hash map from path indices to
+        cell architectures. We have created a pickle file which contains this hash map, located
+        at https://drive.google.com/file/d/1yMRFxT6u3ZyfiWUPhtQ_B9FbuGN3X-Nf/view?usp=sharing
+        """
+        self.index_hash = pickle.load(open(os.path.expanduser(index_hash_folder + 'index_hash.pkl'), 'rb'))
 
+        # instructions for installing nasbench-101 and nas-bench-201 are in the readme
         if loaded_nasbench:
             self.nasbench = loaded_nasbench
         elif search_space == 'nasbench':
