@@ -14,6 +14,11 @@ Many algorithms for neural architecture search (NAS) represent each neural archi
 - pytorch == 1.2.0, torchvision == 0.4.0 (used for experiments on the DARTS search space)
 - pybnn (used only for the DNGO baselien algorithm. Installation instructions [here](https://github.com/automl/pybnn))
 
+If you run experiments on the DARTS search space, you will need our fork of the DARTS repo:
+- Download our fork of the DARTS repo: https://github.com/naszilla/darts
+- If you don't put the repo in your home directory, i.e., ~/darts, then update line 7 of nas-encodings/darts/arch.py and line 8 of nas-encodings/train_arch_runner.py with the correct path.
+
+
 #### Download nasbench-101
 - Download the nasbench_only108 tfrecord file (size 499MB) [here](https://storage.googleapis.com/nasbench/nasbench_only108.tfrecord)
 - Place `nasbench_only108.tfrecord` in the top level folder of this repo
