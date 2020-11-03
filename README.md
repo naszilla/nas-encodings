@@ -1,5 +1,7 @@
 # A Study on Encodings for Neural Architecture Search
 
+**Note: this repository has been combined with other naszilla projects into [naszilla/naszilla](https://github.com/naszilla/naszilla). This repo is deprecated and not maintained. Please use [naszilla/naszilla](https://github.com/naszilla/naszilla), which has more functionality.**
+
 [A Study on Encodings for Neural Architecture Search](https://arxiv.org/abs/2007.04965)\
 Colin White, Willie Neiswanger, Sam Nolen, and Yash Savani.\
 _arxiv:2007.04965_.
