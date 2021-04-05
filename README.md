@@ -50,10 +50,10 @@ python run_experiments_sequential.py --algo_params evo_encodings --search_space 
 Please cite [our paper](https://arxiv.org/abs/2007.04965) if you use code from this repo:
 
 ```bibtex
-@article{white2020study,
+@inproceedings{white2020study,
   title={A Study on Encodings for Neural Architecture Search},
   author={White, Colin and Neiswanger, Willie and Nolen, Sam and Savani, Yash},
-  journal={arXiv preprint arXiv:2007.04965},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2020}
 }
 ```
